@@ -30,7 +30,7 @@ function letTest() {
   if (true) {
       let x = 71;               // variable diferente
       console.log(x);           // 71
-    }
+  }
     
     console.log(x);             // 31
 }
@@ -39,8 +39,8 @@ function letTest() {
 function hoistingTest() {
 
     console.log(w);               // var permite hoisting => undefined
-    // console.log(z);               // ReferenceError => let no permite hoisting == no undefined
-
+    // console.log(z);            // ReferenceError => let no permite hoisting == no undefined
+    // console.log(y);            // ReferenceError: y is not defined => let no permite hoisting
     var x = 31;
     let y = 91;
     u = 1;                        // variable global, pero deleteable, sin var
@@ -48,7 +48,7 @@ function hoistingTest() {
     if (true) {
         let x = 71;               // variable diferente
         console.log(x);           // 71
-        console.log(y);           // el alcance de y es interno tb => prints 91
+        console.log(y);           // el alcance de y es interno tb, blockscope => prints 91
         let z = 101;
         var w = 1001;             // hoisting de w al lexical scope (la función hoistingTest)
     }
